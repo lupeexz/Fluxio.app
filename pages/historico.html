@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<script>
+(function(){try{var t=localStorage.getItem('cr_theme_v1');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
+</script>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Fluxio — Histórico</title>
+  <link rel="icon" type="image/png" href="../assets/img/icon.png"/>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <link rel="stylesheet" href="../assets/links.css"/>
+</head>
+<body>
+<main class="app shell">
+  <aside class="sidebar">
+    <!-- MARCA FLUXIO -->
+    <div class="brand-fluxio">
+      <img src="../assets/img/icon.png" alt="Fluxio"/>
+      <span>fluxio</span>
+    </div>
+    
+    <nav class="nav">
+      <details class="nav-group" >
+        <summary class="nav-group-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
+          Reenvio / Cancelamento
+          <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="nav-sub">
+            <a class="nav-sub-item" href="../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Novo cadastro</a>
+            <a class="nav-sub-item" href="../pages/dashboard.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>Dashboard</a>
+            <a class="nav-sub-item" href="../pages/registros.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>Registros</a>
+          <a class="nav-sub-item" href="../pages/envios-influencers.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Envios Influencers</a>
+          <a class="nav-sub-item" href="../pages/devolucoes.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7v6h6"/><path d="M3 13a9 9 0 1 0 3-7.7L3 7"/></svg>Devoluções</a>
+        </div>
+      </details>
+      <details class="nav-group active-group" open>
+        <summary class="nav-group-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Links
+          <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="nav-sub">
+            <a class="nav-sub-item" href="../pages/links.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Gerador de links</a>
+            <a class="nav-sub-item active" href="../pages/historico.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Histórico</a>
+            <a class="nav-sub-item" href="../pages/produtos.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Produtos</a>
+        </div>
+      </details>
+      <a class="nav-sub-item" href="clientes-pendentes.html" style="margin-top:4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 8v4l2 1"/></svg>
+        Clientes Pendentes
+      </a>
+      <a class="nav-sub-item" href="notas.html" style="margin-top:4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Notas
+      </a>
+      <a class="nav-sub-item" href="tarefas.html" style="margin-top:4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Tarefas
+        <span class="nav-badge hidden" id="tarefasBadge">0</span>
+      </a>
+      <a class="nav-sub-item admin-only" href="../pages/usuarios.html" style="margin-top:4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Usuários
+        <span class="nav-badge hidden" id="pendBadge">0</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info-box" onclick="window.location.href='conta.html'" style="cursor:pointer">
+        <div class="user-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div>
+          <div class="user-name-display" style="font-size:12px;font-weight:600;color:var(--text)"></div>
+          <div class="user-role-display" style="font-size:11px;color:var(--muted)"></div>
+        </div>
+        
+      </div>
+      <button class="secondary" onclick="logout()" style="width:100%;margin-top:8px">Sair</button>
+    </div>
+  </aside>
+  <section class="main">
+    <div class="topbar">
+      <div class="page-title">
+        <p class="eyebrow">Links</p>
+        <h1>Histórico de Links</h1>
+        <p class="muted">Últimos 100 links copiados.</p>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <span class="status-chip" id="countChip"><span class="status-dot-green"></span>0 links</span>
+        <button class="secondary" onclick="exportCsv()" style="font-size:13px">Exportar CSV</button>
+        <button class="secondary admin-only" onclick="clearHistory()" style="font-size:13px;color:var(--danger);border-color:rgba(241,106,126,.3)">Limpar tudo</button>
+      </div>
+    </div>
+    <div class="card toolbar" style="margin-bottom:16px">
+      <label class="field"><span>Buscar</span><input id="filterSearch" placeholder="Produto, campanha, source..."/></label>
+      <label class="field"><span>Campanha</span><select id="filterCampaign"><option value="">Todas</option></select></label>
+      <label class="field"><span>Source</span><select id="filterSource"><option value="">Todos</option></select></label>
+      <label class="field"><span>Gerado por</span><select id="filterUsuario"><option value="">Todo o time</option></select></label>
+    </div>
+    <div id="loadingHist" class="links-loading"><span class="links-spinner"></span> Carregando histórico...</div>
+    <div id="emptyHist" class="card links-empty hidden"><div class="links-empty-icon">🕓</div>Nenhum link copiado ainda.</div>
+    <div class="card" style="padding:0;overflow:hidden;display:none" id="histCard">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Produto</th><th>Categoria</th><th>Campanha</th><th>Source</th><th>Gerado por</th><th>Data/Hora</th><th>Link</th><th></th></tr></thead>
+          <tbody id="histBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="../js/config.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/db.js"></script>
+<script src="../js/shared.js"></script>
+<script src="../js/pages/historico.js"></script>
+</body>
+</html>

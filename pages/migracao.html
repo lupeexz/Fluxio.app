@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<script>
+(function(){try{var t=localStorage.getItem('cr_theme_v1');if(t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
+</script>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Fluxio — Migração</title>
+  <link rel="icon" type="image/png" href="../assets/img/icon.png"/>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <link rel="stylesheet" href="../assets/links.css"/>
+</head>
+<body>
+<main class="app shell">
+  <aside class="sidebar">
+    <!-- MARCA FLUXIO -->
+    <div class="brand-fluxio">
+      <img src="../assets/img/icon.png" alt="Fluxio"/>
+      <span>fluxio</span>
+    </div>
+    
+    <nav class="nav">
+      <details class="nav-group active-group" open>
+        <summary class="nav-group-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
+          Reenvio / Cancelamento
+          <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="nav-sub">
+          <a class="nav-sub-item" href="../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Novo cadastro</a>
+          <a class="nav-sub-item" href="dashboard.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>Dashboard</a>
+          <a class="nav-sub-item" href="registros.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>Registros</a>
+          <a class="nav-sub-item" href="envios-influencers.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Envios Influencers</a>
+          <a class="nav-sub-item" href="devolucoes.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7v6h6"/><path d="M3 13a9 9 0 1 0 3-7.7L3 7"/></svg>Devoluções</a>
+          <a class="nav-sub-item active" href="migracao.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Migração</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary class="nav-group-header">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Links
+          <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
+        <div class="nav-sub">
+          <a class="nav-sub-item" href="links.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Gerador de links</a>
+          <a class="nav-sub-item" href="historico.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Histórico</a>
+          <a class="nav-sub-item" href="produtos.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Produtos</a>
+        </div>
+      </details>
+      <a class="nav-sub-item" href="clientes-pendentes.html" style="margin-top:4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 8v4l2 1"/></svg>
+        Clientes Pendentes
+      </a>
+      <a class="nav-sub-item" href="notas.html" style="margin-top:4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Notas
+      </a>
+      <a class="nav-sub-item" href="tarefas.html" style="margin-top:4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Tarefas
+        <span class="nav-badge hidden" id="tarefasBadge">0</span>
+      </a>
+      <a class="nav-sub-item admin-only" href="usuarios.html" style="margin-top:4px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Usuários
+        <span class="nav-badge hidden" id="pendBadge">0</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info-box" onclick="window.location.href='conta.html'" style="cursor:pointer">
+        <div class="user-avatar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div>
+          <div class="user-name-display" style="font-size:12px;font-weight:600;color:var(--text)"></div>
+          <div class="user-role-display" style="font-size:11px;color:var(--muted)"></div>
+        </div>
+        
+      </div>
+      <button class="secondary" onclick="logout()" style="width:100%;margin-top:8px">Sair</button>
+    </div>
+  </aside>
+
+  <section class="main">
+    <div class="topbar">
+      <div class="page-title">
+        <p class="eyebrow">Admin</p>
+        <h1>Migração de dados</h1>
+        <p class="muted">Importe os registros do Google Sheets para o Supabase.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px">
+      <p class="eyebrow" style="margin-bottom:10px">⚠️ Como funciona</p>
+      <p class="muted" style="font-size:13px;line-height:1.7">
+        Este processo busca todos os registros do Google Sheets e salva no Supabase.<br/>
+        Registros já existentes no banco <strong>não serão duplicados</strong>.<br/>
+        Execute apenas uma vez. Após a migração, todos os novos registros já serão salvos direto no banco.
+      </p>
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+        <button id="btnMigrar" onclick="iniciarMigracao()">
+          ▶ Iniciar migração
+        </button>
+        <button class="secondary" onclick="verificarBanco()">
+          Verificar banco atual
+        </button>
+      </div>
+    </div>
+
+    <div id="progressCard" class="card hidden">
+      <p class="eyebrow" style="margin-bottom:10px">Progresso</p>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+      </div>
+      <p id="progressText" class="muted" style="font-size:13px;margin-top:10px">Aguardando...</p>
+    </div>
+
+    <div id="logCard" class="card hidden" style="margin-top:16px">
+      <p class="eyebrow" style="margin-bottom:10px">Log</p>
+      <div id="logBody" style="font-family:monospace;font-size:12px;color:var(--text2);max-height:400px;overflow-y:auto;line-height:1.8"></div>
+    </div>
+
+  </section>
+</main>
+
+<style>
+.progress-bar-wrap { background:var(--bg3); border-radius:999px; height:8px; overflow:hidden; }
+.progress-bar { background:var(--brand); height:100%; border-radius:999px; transition:width 0.3s; }
+</style>
+
+<script src="../js/config.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/db.js"></script>
+<script src="../js/shared.js"></script>
+<script src="../js/pages/migracao.js"></script>
+</body>
+</html>
