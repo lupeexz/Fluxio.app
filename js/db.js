@@ -140,6 +140,38 @@ async function dbGetHistoricoLinks(limit = 100) {
   return sbFetch(`historico_links?select=*&order=criado_em.desc&limit=${limit}`);
 }
 
+// ── SUPER ADMIN (painel geral da plataforma) ──
+async function dbSouSuperAdmin() {
+  try {
+    const rows = await sbFetch(`super_admins?id=eq.${getAuthSession()?.user?.id}&select=id`);
+    return !!rows?.length;
+  } catch { return false; }
+}
+
+async function dbGetTodasEmpresas() {
+  return sbFetch('empresas?select=*&order=criado_em.desc');
+}
+
+async function dbGetTodosPerfis() {
+  return sbFetch('profiles?select=*,empresas(nome)&order=criado_em.desc');
+}
+
+async function dbGetContagemPorEmpresa(tabela) {
+  return sbFetch(`${tabela}?select=empresa_id`);
+}
+
+async function dbGetMensagensSuporte() {
+  return sbFetch('suporte_mensagens?select=*&order=criado_em.desc');
+}
+
+async function dbCreateMensagemSuporte(data) {
+  return sbFetch('suporte_mensagens', { method: 'POST', body: JSON.stringify(data) });
+}
+
+async function dbUpdateMensagemSuporte(id, data) {
+  return sbFetch(`suporte_mensagens?id=eq.${id}`, { method: 'PATCH', body: JSON.stringify(data) });
+}
+
 // ── MULTI-EMPRESA ──
 async function getAllProductsMerged() {
   if (!isSupabaseReady()) {

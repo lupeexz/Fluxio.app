@@ -22,6 +22,7 @@
     </div>
     
 
+        <a href="admin.html" class="super-admin-only" style="display:none;margin:0 16px 14px;padding:9px 12px;border-radius:10px;background:rgba(124,106,245,.12);border:1px solid rgba(124,106,245,.3);color:#b8aff8;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;text-decoration:none"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg> Painel Admin</a>
     <nav class="nav">
       <details class="nav-group">
         <summary class="nav-group-header">
@@ -143,6 +144,26 @@
         <div><span class="tarefa-meta-label">Empresa</span><span id="infoLojas">—</span></div>
         <div><span class="tarefa-meta-label">Conta criada em</span><span id="infoCriado">—</span></div>
       </div>
+    </div>
+
+    <!-- SUPORTE -->
+    <div class="card" style="max-width:900px;margin-top:16px">
+      <p class="eyebrow" style="margin-bottom:6px">Precisa de ajuda?</p>
+      <p class="muted" style="margin-bottom:14px">Manda uma mensagem pro time do Fluxio — a gente responde por e-mail.</p>
+      <form id="formSuporte" style="display:flex;flex-direction:column;gap:12px">
+        <label class="field">
+          <span>Assunto</span>
+          <input id="suporteAssunto" required placeholder="Ex: Dúvida sobre devoluções"/>
+        </label>
+        <label class="field">
+          <span>Mensagem</span>
+          <textarea id="suporteMensagem" required placeholder="Descreve o que tá acontecendo..." style="min-height:90px;resize:vertical;border-color:var(--brand-border);background:var(--panel-3)"></textarea>
+        </label>
+        <div style="display:flex;align-items:center;gap:12px">
+          <button type="submit" style="height:38px;padding:0 20px">Enviar mensagem</button>
+          <p id="msgSuporte" class="message" style="margin:0"></p>
+        </div>
+      </form>
     </div>
   </section>
 </main>

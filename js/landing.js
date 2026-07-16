@@ -30,6 +30,12 @@ async function handleCriarEmpresa(e) {
 
   const slug = slugify(nomeEmpresa) + '-' + Math.random().toString(36).slice(2, 6);
 
+  // Guarda os dados da empresa — se o e-mail precisar de confirmação antes
+  // de liberar o login, a criação da empresa completa depois, no primeiro login.
+  localStorage.setItem('fluxio_pending_empresa', JSON.stringify({
+    nomeEmpresa, slug, seuNome, email, cnpj, telefone,
+  }));
+
   btn.disabled = true;
   msgEl.textContent = 'Criando sua conta...';
   msgEl.className = 'lp-msg';
@@ -38,13 +44,14 @@ async function handleCriarEmpresa(e) {
     await authSignUp(email, senha);
 
     if (!isLoggedIn()) {
-      msgEl.textContent = 'Conta criada! Confirme seu e-mail (checa a caixa de entrada) e depois entra pelo botão "Entrar".';
+      msgEl.textContent = 'Conta criada! Confirme seu e-mail (checa a caixa de entrada) — assim que você entrar pela primeira vez, sua empresa é criada automaticamente.';
       msgEl.className = 'lp-msg ok';
       btn.disabled = false;
       return;
     }
 
     await dbCriarEmpresaEAdmin(nomeEmpresa, slug, seuNome, email, cnpj, telefone);
+    localStorage.removeItem('fluxio_pending_empresa');
     msgEl.textContent = 'Empresa criada! Redirecionando pro sistema...';
     msgEl.className = 'lp-msg ok';
     setTimeout(() => { window.location.href = 'index.html'; }, 900);

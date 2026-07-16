@@ -7,10 +7,12 @@
 
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Fluxio — Links</title>
+  <title>Fluxio — Painel Admin</title>
   <link rel="icon" type="image/png" href="../assets/img/icon.png"/>
   <link rel="stylesheet" href="../assets/style.css"/>
   <link rel="stylesheet" href="../assets/links.css"/>
+  <link rel="stylesheet" href="../assets/tarefas.css"/>
+  <link rel="stylesheet" href="../assets/extra.css"/>
 </head>
 <body>
 <main class="app shell">
@@ -23,7 +25,7 @@
     
         <a href="admin.html" class="super-admin-only" style="display:none;margin:0 16px 14px;padding:9px 12px;border-radius:10px;background:rgba(124,106,245,.12);border:1px solid rgba(124,106,245,.3);color:#b8aff8;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;text-decoration:none"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg> Painel Admin</a>
     <nav class="nav">
-      <details class="nav-group" >
+      <details class="nav-group active-group" open>
         <summary class="nav-group-header">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
           Reenvio / Cancelamento
@@ -31,20 +33,20 @@
         </summary>
         <div class="nav-sub">
             <a class="nav-sub-item" href="../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Novo cadastro</a>
-            <a class="nav-sub-item" href="../pages/dashboard.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>Dashboard</a>
+            <a class="nav-sub-item active" href="../pages/dashboard.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>Dashboard</a>
             <a class="nav-sub-item" href="../pages/registros.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>Registros</a>
           <a class="nav-sub-item" href="../pages/envios-influencers.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Envios Influencers</a>
           <a class="nav-sub-item" href="../pages/devolucoes.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7v6h6"/><path d="M3 13a9 9 0 1 0 3-7.7L3 7"/></svg>Devoluções</a>
         </div>
       </details>
-      <details class="nav-group active-group" open>
+      <details class="nav-group" >
         <summary class="nav-group-header">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           Links
           <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <div class="nav-sub">
-            <a class="nav-sub-item active" href="../pages/links.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Gerador de links</a>
+            <a class="nav-sub-item" href="../pages/links.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Gerador de links</a>
             <a class="nav-sub-item" href="../pages/historico.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Histórico</a>
             <a class="nav-sub-item" href="../pages/produtos.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Produtos</a>
         </div>
@@ -80,88 +82,66 @@
       <button class="secondary" onclick="logout()" style="width:100%;margin-top:8px">Sair</button>
     </div>
   </aside>
+
   <section class="main">
     <div class="topbar">
-      <div id="empresaBadgeTop" class="empresa-badge" style="display:none"></div>
       <div class="page-title">
-        <p class="eyebrow">Vendas</p>
-        <h1>Links de Pagamento</h1>
-        <p class="muted">Configure as UTMs, selecione a campanha e busque o produto.</p>
-      </div>
-      <span class="status-chip"><span class="status-dot-green"></span>93 produtos</span>
-    </div>
-    <div class="card links-config-card">
-      <p class="eyebrow" style="margin-bottom:14px">Configuração UTM</p>
-      <div class="utm-form-grid">
-        <label class="field"><span>Campanha (utm_campaign)</span>
-          <select id="utmCampaign">
-            <option value="">— Selecione a campanha —</option>
-            <option value="carrinho_abandonado">Carrinho Abandonado</option>
-            <option value="carrinho_abandonado_fds">Carrinho Abandonado FDS</option>
-            <option value="carrinho_abandonado_completa">Carrinho Abandonado Completa</option>
-            <option value="carrinho_abandonado_perito">Carrinho Abandonado Perito</option>
-            <option value="carrinho_abandonado_20_02_24_02">Carrinho Abandonado 20/02-24/02</option>
-            <option value="carrinho_abandonado_fds_joao">Carrinho Abandonado FDS-João</option>
-            <option value="carrinho_abandonado_fds_gabriel">Carrinho Abandonado FDS-Gabriel</option>
-            <option value="popup">Popup</option>
-            <option value="preciso_de_ajuda">Preciso de ajuda</option>
-            <option value="pix_cancelado">Pix Cancelado</option>
-            <option value="instagram">Instagram</option>
-            <option value="linkme">LinkMe</option>
-            <option value="email">E-mail</option>
-            <option value="whatsapp">WhatsApp</option>
-            <option value="recorrente">Recorrente</option>
-            <option value="site">Site</option>
-            <option value="preciso_de_ajuda_completa">Preciso de ajuda Completa</option>
-            <option value="campanha">Campanha</option>
-            <option value="carrinho_pagamento">Carrinho-pagamento</option>
-            <option value="campanha_frascos">Campanha-Frascos</option>
-            <option value="campanha_melhor_cliente">Campanha-Melhor-Cliente</option>
-            <option value="campanha_brasil">Campanha Brasil</option>
-          </select>
-        </label>
-        <label class="field"><span>utm_source</span>
-          <select id="utmSource">
-            <option value="reportana_3938">Reportana 3938</option>
-            <option value="reportana_1058">Reportana 1058</option>
-            <option value="whatsapp_9411">WhatsApp 9411</option>
-            <option value="whatsapp_3169">WhatsApp 3169</option>
-            <option value="email">E-mail</option>
-          </select>
-        </label>
-        <label class="field"><span>utm_medium</span><input id="utmMedium" value="whatsapp"/></label>
+        <p class="eyebrow">Plataforma Fluxio</p>
+        <h1>Painel Admin</h1>
+        <p class="muted">Visão geral de todas as empresas usando o Fluxio — só você vê essa página.</p>
       </div>
     </div>
-    <div class="card" style="margin-bottom:16px">
-      <p class="eyebrow" style="margin-bottom:12px">Buscar produto</p>
-      <div id="noCampWarn" class="links-warn hidden">⚠️ Selecione uma campanha antes de buscar.</div>
-      <div class="links-search-row">
-        <label class="field" style="flex:1;margin:0"><input id="searchInput" placeholder="Ex: 3 frascos kirkland, kit lenhador, dermaroller..."/></label>
-        <button id="btnSearch" onclick="doSearch()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          Buscar
-        </button>
-      </div>
-      <p id="searchError" class="message error hidden" style="margin-top:10px"></p>
+
+    <!-- VISÃO GERAL -->
+    <div class="grid four" style="margin-bottom:24px;gap:14px">
+      <div class="stat stat-impacto"><b id="statEmpresas">0</b><span>Empresas cadastradas</span></div>
+      <div class="stat stat-impacto"><b id="statUsuarios">0</b><span>Usuários na plataforma</span></div>
+      <div class="stat stat-impacto"><b id="statRegistros">0</b><span>Registros de reenvio/cancelamento</span></div>
+      <div class="stat stat-impacto"><b id="statPendentes">0</b><span>Solicitações pendentes</span></div>
     </div>
-    <div id="loadingEl" class="links-loading hidden"><span class="links-spinner"></span> Buscando...</div>
-    <div id="noResultsEl" class="card links-empty hidden"><div class="links-empty-icon">🔍</div>Nenhum produto encontrado.</div>
-    <div id="emptyState" class="card links-empty"><div class="links-empty-icon">🔗</div>Selecione a campanha e pesquise um produto.</div>
-    <div id="resultsList" class="results-grid"></div>
-    <div id="historySection" class="hidden" style="margin-top:28px">
-      <div class="hist-header">
-        <div><p class="eyebrow" style="margin-bottom:2px">Histórico</p><p class="muted" style="font-size:12px;margin:0">Últimos links copiados.</p></div>
-        <button class="secondary" onclick="clearHistory()" style="font-size:12px;padding:6px 12px">Limpar histórico</button>
+
+    <!-- SOLICITAÇÕES DE CONTA (TODAS AS EMPRESAS) -->
+    <div id="solicitacoesSection" style="display:none;margin-bottom:24px">
+      <p class="eyebrow" style="margin-bottom:10px">🔔 Solicitações de criação de conta</p>
+      <div class="card" style="padding:0;overflow:hidden">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Nome</th><th>E-mail</th><th>Empresa</th><th>Pedido em</th><th></th></tr></thead>
+            <tbody id="solicitacoesBody"></tbody>
+          </table>
+        </div>
       </div>
-      <div id="historyList" class="hist-list"></div>
+    </div>
+
+    <!-- MENSAGENS DE SUPORTE -->
+    <div style="margin-bottom:24px">
+      <p class="eyebrow" style="margin-bottom:10px">💬 Mensagens de suporte</p>
+      <div id="suporteEmpty" class="card links-empty hidden">
+        <div class="links-empty-icon">✅</div>
+        Nenhuma mensagem de suporte por enquanto.
+      </div>
+      <div id="suporteList" style="display:flex;flex-direction:column;gap:10px"></div>
+    </div>
+
+    <!-- EMPRESAS -->
+    <div>
+      <p class="eyebrow" style="margin-bottom:10px">🏢 Empresas cadastradas</p>
+      <div class="card" style="padding:0;overflow:hidden">
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Empresa</th><th>CNPJ</th><th>Telefone</th><th>Plano</th><th>Usuários</th><th>Registros</th><th>Criada em</th></tr></thead>
+            <tbody id="empresasBody"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </section>
 </main>
+
 <script src="../js/config.js"></script>
 <script src="../js/auth.js"></script>
 <script src="../js/db.js"></script>
 <script src="../js/shared.js"></script>
-<script src="../js/products.js"></script>
-<script src="../js/pages/links.js"></script>
+<script src="../js/pages/admin.js"></script>
 </body>
 </html>

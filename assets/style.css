@@ -230,6 +230,9 @@ h3 { font-size: 14px; font-weight: 600; margin: 0 0 14px; color: var(--text2); }
 .grid { display: grid; gap: 16px; }
 .grid.two { grid-template-columns: 1.5fr minmax(260px,.65fr); align-items: start; }
 .grid.three { grid-template-columns: repeat(3,1fr); }
+.grid.four { grid-template-columns: repeat(4,1fr); }
+@media (max-width: 900px) { .grid.four { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px) { .grid.four { grid-template-columns: 1fr; } }
 
 .form-grid {
   display: grid;

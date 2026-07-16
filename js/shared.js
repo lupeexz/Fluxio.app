@@ -61,7 +61,38 @@ async function requireAuth() {
       console.error('Erro ao carregar perfil:', e);
       const inSubPage = window.location.pathname.includes('/pages/');
       window.location.href = inSubPage ? '../index.html' : 'index.html';
+      return;
     }
+  }
+  // Verifica (e cacheia) se é super admin da plataforma
+  if (sessionStorage.getItem('fluxio_super_admin_v1') === null) {
+    try {
+      const souSuperAdmin = await dbSouSuperAdmin();
+      sessionStorage.setItem('fluxio_super_admin_v1', souSuperAdmin ? 'true' : 'false');
+    } catch { sessionStorage.setItem('fluxio_super_admin_v1', 'false'); }
+  }
+}
+
+function isSuperAdmin() {
+  return sessionStorage.getItem('fluxio_super_admin_v1') === 'true';
+}
+
+// Se a pessoa criou empresa mas precisou confirmar o e-mail antes,
+// completa a criação da empresa agora, no primeiro login de verdade.
+async function completarEmpresaPendente() {
+  try {
+    const raw = localStorage.getItem('fluxio_pending_empresa');
+    if (!raw) return false;
+    const pend = JSON.parse(raw);
+    const session = getAuthSession();
+    if (!session?.user?.email || session.user.email.toLowerCase() !== pend.email.toLowerCase()) return false;
+
+    await dbCriarEmpresaEAdmin(pend.nomeEmpresa, pend.slug, pend.seuNome, pend.email, pend.cnpj, pend.telefone);
+    localStorage.removeItem('fluxio_pending_empresa');
+    return true;
+  } catch (e) {
+    console.error('Erro ao completar empresa pendente:', e);
+    return false;
   }
 }
 
@@ -72,6 +103,7 @@ function isAdmin() {
 function logout() {
   authSignOut().finally(() => {
     localStorage.removeItem(PROFILE_KEY);
+    sessionStorage.removeItem('fluxio_super_admin_v1');
     const inSubPage = window.location.pathname.includes('/pages/');
     window.location.href = inSubPage ? '../index.html' : 'index.html';
   });
@@ -89,6 +121,10 @@ function showUserInfo() {
   if (user.role !== 'admin') {
     document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'none');
   }
+  // Mostra itens super-admin-only (painel geral da plataforma) só pra você
+  document.querySelectorAll('.super-admin-only').forEach(el => {
+    el.style.display = isSuperAdmin() ? 'flex' : 'none';
+  });
   // Carrega badge de pendências
   loadPendingBadge();
   // Atualiza ícone do tema

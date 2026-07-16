@@ -5,7 +5,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.getElementById('formDados').addEventListener('submit', handleSalvarDados);
   document.getElementById('formSenha').addEventListener('submit', handleAlterarSenha);
+  document.getElementById('formSuporte').addEventListener('submit', handleEnviarSuporte);
 });
+
+async function handleEnviarSuporte(e) {
+  e.preventDefault();
+  const user = getSessionUser();
+  const assunto  = document.getElementById('suporteAssunto').value.trim();
+  const mensagem = document.getElementById('suporteMensagem').value.trim();
+  const msgEl = document.getElementById('msgSuporte');
+
+  try {
+    await dbCreateMensagemSuporte({
+      empresa_id:    user.empresa_id,
+      usuario_id:    user.id,
+      usuario_nome:  user.nome,
+      usuario_email: user.email,
+      assunto, mensagem,
+    });
+    document.getElementById('formSuporte').reset();
+    msgEl.textContent = '✓ Mensagem enviada! A gente responde por e-mail.';
+    msgEl.className = 'message ok';
+  } catch(err) {
+    msgEl.textContent = 'Erro: ' + (err.message || 'não foi possível enviar.');
+    msgEl.className = 'message error';
+  }
+  setTimeout(() => { msgEl.textContent = ''; msgEl.className = 'message'; }, 5000);
+}
 
 function loadDados() {
   const user = getSessionUser();

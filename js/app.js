@@ -89,7 +89,15 @@ async function handleEntrarEmpresa(e) {
 // ── SISTEMA ──
 async function tryShowSystem() {
   try {
-    const perfil = await carregarPerfil();
+    let perfil = await carregarPerfil();
+
+    // Se não achou perfil, pode ser que a empresa ficou pendente
+    // (confirmação de e-mail no meio do cadastro) — completa agora.
+    if (!perfil) {
+      const completou = await completarEmpresaPendente();
+      if (completou) perfil = await carregarPerfil();
+    }
+
     if (!perfil) {
       $("loginScreen").classList.remove("hidden");
       $("pendingScreen").classList.add("hidden");
